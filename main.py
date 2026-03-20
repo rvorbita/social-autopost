@@ -1,177 +1,3 @@
-# import os
-# import io
-# import json
-# import textwrap
-# import asyncio
-# from PIL import Image, ImageDraw, ImageFont
-# from fontTools.ttLib import TTFont
-# from dotenv import load_dotenv
-# from pydantic import BaseModel
-
-# # ✅ Modern SDK Imports
-# from huggingface_hub import AsyncInferenceClient
-# from google import genai
-# from google.genai import types
-
-# # -----------------------------
-# # SETUP & CONFIG
-# # -----------------------------
-# load_dotenv()
-
-# # Clients
-# client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-# hf_client = AsyncInferenceClient(token=os.getenv("HF_TOKEN"))
-
-# WIDTH = 1024
-# HEIGHT = 1024
-# FONT_PATH = "Montserrat-Bold.ttf" 
-# FONT_SIZE = 65  # Large, bold impact
-
-# # Colors based on your reference image
-# YELLOW_HIGHLIGHT = (255, 215, 0) # The "Transformers" yellow
-# TEXT_COLOR = (255, 255, 255)
-# BAR_COLOR = (0, 0, 0) # Pure black bars
-
-# class TopicList(BaseModel):
-#     topics: list[str]
-
-# class PostContent(BaseModel):
-#     headline: str
-#     highlights: list[str]
-#     image_prompt: str
-
-# # -----------------------------
-# # HELPERS
-# # -----------------------------
-# def clean_json(text):
-#     start = text.find('{')
-#     end = text.rfind('}')
-#     return text[start:end+1] if start != -1 else "{}"
-
-# # -----------------------------
-# # STEP 1: CONTENT GENERATION
-# # -----------------------------
-# async def generate_topics(num=1):
-#     prompt = f"Generate {num} viral movie or tech news facts. Max 8 words."
-#     try:
-#         res = await client.aio.models.generate_content(
-#             model="gemini-2.5-flash",
-#             contents=prompt,
-#             config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=TopicList)
-#         )
-#         data = json.loads(clean_json(res.text))
-#         return data.get("topics", ["Transformers 8 is coming back"])
-#     except: return ["Transformers 8 is coming back"]
-
-# async def generate_content(topic):
-#     prompt = f"Create a viral headline and image prompt for: {topic}. Provide 2-3 keywords to highlight."
-#     try:
-#         res = await client.aio.models.generate_content(
-#             model="gemini-2.5-flash",
-#             contents=prompt,
-#             config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=PostContent)
-#         )
-#         data = json.loads(clean_json(res.text))
-#         return data["headline"].upper(), [h.upper() for h in data["highlights"]], data["image_prompt"]
-#     except: return "NEWS ALERT", [], "cinematic movie poster"
-
-# # -----------------------------
-# # STEP 2: IMAGE GENERATION (FREE HF)
-# # -----------------------------
-# async def generate_image(prompt, filename):
-#     model_id = "stabilityai/stable-diffusion-xl-base-1.0"
-#     try:
-#         image = await hf_client.text_to_image(prompt=prompt, model=model_id)
-#         image = image.resize((WIDTH, HEIGHT), Image.LANCZOS)
-#         image.save(filename)
-#         return filename
-#     except Exception as e:
-#         print(f"⚠️ HF Error: {e}. Using fallback grey.")
-#         img = Image.new('RGB', (WIDTH, HEIGHT), color=(40, 40, 40))
-#         img.save(filename)
-#         return filename
-
-# # -----------------------------
-# # STEP 3: DRAWING THE UI (THE TRANSFORMERS STYLE)
-# # -----------------------------
-# def apply_transformers_style(bg_path, headline, highlights, output_path):
-#     img = Image.open(bg_path).convert("RGBA")
-#     draw = ImageDraw.Draw(img)
-    
-#     try:
-#         font = ImageFont.truetype(FONT_PATH, FONT_SIZE)
-#     except:
-#         font = ImageFont.load_default()
-
-#     # Wrap text to fit width
-#     lines = textwrap.wrap(headline, width=22)
-    
-#     # Calculate starting Y (bottom of image)
-#     line_height = FONT_SIZE + 15
-#     total_text_height = len(lines) * line_height
-#     current_y = HEIGHT - total_text_height - 60 # 60px padding from bottom
-
-#     for line in lines:
-#         words = line.split(" ")
-#         current_x = 40 # Left margin
-        
-#         for word in words:
-#             clean_word = word.strip(",.!?").upper()
-#             bbox = draw.textbbox((0, 0), word + " ", font=font)
-#             w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-
-#             # If word is a highlight, draw the yellow bar behind it
-#             if clean_word in highlights or "TRANSFORMERS" in clean_word:
-#                 draw.rectangle([current_x, current_y, current_x + w, current_y + line_height - 5], fill=YELLOW_HIGHLIGHT)
-#                 draw.text((current_x, current_y), word + " ", font=font, fill=BAR_COLOR)
-#             else:
-#                 # Draw black bar for normal text
-#                 draw.rectangle([current_x, current_y, current_x + w, current_y + line_height - 5], fill=BAR_COLOR)
-#                 draw.text((current_x, current_y), word + " ", font=font, fill=TEXT_COLOR)
-            
-#             current_x += w
-        
-#         current_y += line_height
-
-#     img.convert("RGB").save(output_path, "PNG")
-
-# # -----------------------------
-# # STEP 4: ORCHESTRATION
-# # -----------------------------
-# async def create_post(topic, index, semaphore):
-#     async with semaphore:
-#         headline, highlights, img_prompt = await generate_content(topic)
-        
-#         bg_tmp = f"bg_{index}.jpg"
-#         await generate_image(img_prompt, bg_tmp)
-
-#         final_name = f"final_post_{index}.png"
-#         # Run image manipulation in a separate thread
-#         await asyncio.to_thread(apply_transformers_style, bg_tmp, headline, highlights, final_name)
-        
-#         if os.path.exists(bg_tmp): os.remove(bg_tmp)
-#         print(f"✅ Created: {final_name}")
-
-# async def main():
-#     topics = await generate_topics(3)
-#     semaphore = asyncio.Semaphore(1)
-#     tasks = [create_post(t, i+1, semaphore) for i, t in enumerate(topics)]
-#     await asyncio.gather(*tasks)
-
-# if __name__ == "__main__":
-#     asyncio.run(main())
-
-
-
-
-
-
-
-
-
-
-
-
 
 import os
 import io
@@ -400,7 +226,7 @@ def apply_transformers_style(bg_path, headline, main_topic, output_path):
         current_y += line_height
 
     # ✅ NEW: Add Centered Watermark below the text block
-    watermark_text = "FOLLOW BFACTS"
+    watermark_text = "FOLLOW NO WAY DAILY"
     # Create a new image for the watermark text to handle opacity separately
     txt_img = Image.new('RGBA', img.size, (255, 255, 255, 0))
     txt_draw = ImageDraw.Draw(txt_img)
@@ -422,14 +248,61 @@ def apply_transformers_style(bg_path, headline, main_topic, output_path):
     img.convert("RGB").save(output_path, "PNG")
 
 
+# # -----------------------------
+# # STEP 4: ORCHESTRATION
+# # -----------------------------
+# async def create_post(topic, index, semaphore):
+#     async with semaphore:
+#         headline, main_topic, caption, img_prompt = await generate_content(topic)
+
+#         # 🔍 ADD THIS: Print the generated caption to your terminal for review
+#         print("\n" + "="*50)
+#         print(f"📰 DRAFT CAPTION FOR: {topic}")
+#         print("="*50)
+#         print(caption)
+#         print("="*50 + "\n")
+        
+#         bg_tmp = f"bg_{index}.jpg"
+#         await generate_image(img_prompt, bg_tmp)
+
+#         final_name = f"final_post_{index}.png"
+#         await asyncio.to_thread(apply_transformers_style, bg_tmp, headline, main_topic, final_name)
+        
+#         if os.path.exists(bg_tmp): os.remove(bg_tmp)
+#         print(f"✅ Created Image: {final_name}")
+        
+#         # Post to Facebook
+#         # await asyncio.to_thread(post_to_facebook, final_name, caption)
+
+# async def main():
+#     topics = await generate_topics(1)
+#     semaphore = asyncio.Semaphore(1)
+#     tasks = [create_post(t, i+1, semaphore) for i, t in enumerate(topics)]
+#     await asyncio.gather(*tasks)
+
+
+
 # -----------------------------
 # STEP 4: ORCHESTRATION
 # -----------------------------
+def load_queue():
+    """Reads the topics.json file."""
+    if not os.path.exists('topics.json'):
+        print("❌ Error: topics.json not found!")
+        return []
+    with open('topics.json', 'r') as f:
+        return json.load(f)
+
+def update_queue(queue):
+    """Saves the updated queue back to topics.json."""
+    with open('topics.json', 'w') as f:
+        json.dump(queue, f, indent=2)
+
 async def create_post(topic, index, semaphore):
     async with semaphore:
         headline, main_topic, caption, img_prompt = await generate_content(topic)
 
-        # 🔍 ADD THIS: Print the generated caption to your terminal for review
+        # Print the generated caption to your terminal for review
         print("\n" + "="*50)
         print(f"📰 DRAFT CAPTION FOR: {topic}")
         print("="*50)
@@ -445,14 +318,65 @@ async def create_post(topic, index, semaphore):
         if os.path.exists(bg_tmp): os.remove(bg_tmp)
         print(f"✅ Created Image: {final_name}")
         
-        # Post to Facebook
-        # await asyncio.to_thread(post_to_facebook, final_name, caption)
+        # ✅ LIVE POST: Upload to Facebook
+        await asyncio.to_thread(post_to_facebook, final_name, caption)
+
+# async def main():
+#     # 1. Load the queue from topics.json
+#     queue = load_queue()
+    
+#     # 2. Find the first 'approved' topic
+#     target_item = next((item for item in queue if item.get('status') == 'approved'), None)
+    
+#     if not target_item:
+#         print("📭 No 'approved' topics found in topics.json! Please approve more topics.")
+#         return
+
+#     print(f"🚀 Processing Topic ID {target_item['id']}: {target_item['topic']}")
+    
+#     # 3. Process and post it
+#     semaphore = asyncio.Semaphore(1)
+#     await create_post(target_item['topic'], target_item['id'], semaphore)
+    
+#     # 4. Mark as posted and save the JSON file so it doesn't repeat tomorrow
+#     target_item['status'] = 'posted'
+#     update_queue(queue)
+#     print(f"✅ Topic {target_item['id']} successfully marked as 'posted' in topics.json")
+
 
 async def main():
-    topics = await generate_topics(1)
-    semaphore = asyncio.Semaphore(1)
-    tasks = [create_post(t, i+1, semaphore) for i, t in enumerate(topics)]
-    await asyncio.gather(*tasks)
+    # 1. Load the queue
+    queue = load_queue()
+    
+    # 2. Find up to 3 'approved' topics
+    to_post = [item for item in queue if item.get('status') == 'approved'][:1]
+    
+    if not to_post:
+        print("📭 No 'approved' topics found! Please approve more in topics.json.")
+        return
+
+    print(f"🚀 Found {len(to_post)} topics to post. Starting automation...")
+    
+    semaphore = asyncio.Semaphore(1) # Keeps them sequential to avoid errors
+    
+    for i, target_item in enumerate(to_post):
+        print(f"📸 Processing ({i+1}/3): {target_item['topic']}")
+        
+        # Process and post
+        await create_post(target_item['topic'], target_item['id'], semaphore)
+        
+        # Mark as posted
+        target_item['status'] = 'posted'
+        
+        # Small delay between posts so Facebook doesn't flag as spam
+        if i < len(to_post) - 1:
+            print("Wait 30 seconds before next post...")
+            await asyncio.sleep(30)
+
+    # 3. Save the updated JSON file once at the end
+    update_queue(queue)
+    print("✅ All tasks complete. topics.json updated.")
+
 
 if __name__ == "__main__":
     asyncio.run(main())

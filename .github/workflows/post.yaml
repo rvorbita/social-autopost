@@ -2,7 +2,9 @@ name: Automated FB Queue
 
 on:
   schedule:
-    - cron: '0 8 * * *' # Every day at 8 AM
+    # - cron: '0 8 * * *' # Every day at 8 AM
+    # Runs at 1 AM, 9 AM, and 5 PM UTC (adjust to Manila time as needed)
+    - cron: '0 1,9,17 * * *'
   workflow_dispatch:
 
 jobs:
