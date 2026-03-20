@@ -1,0 +1,7 @@
+google-genai
+huggingface_hub[inference]
+pillow
+python-dotenv
+fonttools
+requests
+pydantic
