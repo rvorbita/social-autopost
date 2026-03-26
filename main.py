@@ -128,7 +128,7 @@ def send_email_report(status, topic_name):
     body += "-"*40 + "\n\n"
     body += captured_logs
 
-    msg = MIMEText(body)
+    msg = MIMEText(body, 'plain',  'utf-8')
     msg['Subject'] = subject
     msg['From'] = f"No Way Daily Bot <{sender_email}>"
     msg['To'] = receiver_email
