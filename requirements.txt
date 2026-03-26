@@ -5,3 +5,5 @@ python-dotenv
 fonttools
 requests
 pydantic
+opencv-python
+numpy
