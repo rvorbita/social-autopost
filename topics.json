@@ -1,212 +1,1002 @@
 [
-  {"id":1,"topic":"The first computer mouse was made of wood","status":"posted"},
-  {"id":2,"topic":"How Bluetooth was named after a Viking King","status":"posted"},
-  {"id":3,"topic":"The actor who almost played Iron Man instead of RDJ","status":"posted"},
-  {"id":4,"topic":"Why Olympic gold medals are actually made of silver","status":"posted"},
-  {"id":5,"topic":"The secret reason why humans have fingerprints","status":"posted"},
-  {"id":6,"topic":"The country with 11 different time zones","status":"posted"},
-  {"id":7,"topic":"How 1.44MB floppy disks still run some subways","status":"posted"},
-  {"id":8,"topic":"The real-life inspiration behind the Joker character","status":"posted"},
-  {"id":9,"topic":"Why Michael Jordan was cut from high school basketball","status":"posted"},
-  {"id":10,"topic":"Why walking in nature actually rewires your brain","status":"posted"},
-  {"id":11,"topic":"The world's shortest international bridge (only 32 feet)","status":"posted"},
-  {"id":12,"topic":"When Microsoft almost bought Nintendo in 1999","status":"posted"},
-  {"id":13,"topic":"The movie that accidentally saved the lives of its crew","status":"posted"},
-  {"id":14,"topic":"How Formula 1 drivers lose 4kg in one race","status":"approved"},
-  {"id":15,"topic":"The 'Blue Zones' where people live past 100","status":"approved"},
-  {"id":16,"topic":"Why Switzerland has enough bunkers for its entire population","status":"approved"},
-  {"id":17,"topic":"Why Google's first storage was made of LEGO bricks","status":"approved"},
-  {"id":18,"topic":"The secret reason Disney characters wear white gloves","status":"approved"},
-  {"id":19,"topic":"The sport that was played on the Moon","status":"approved"},
-  {"id":20,"topic":"How 'Power Naps' actually improve cognitive function","status":"approved"},
-  {"id":21,"topic":"The country that changed its name for branding","status":"approved"},
-  {"id":22,"topic":"Why we call it a 'Bug' in software code","status":"approved"},
-  {"id":23,"topic":"The animation error that created the Creepers in Minecraft","status":"approved"},
-  {"id":24,"topic":"How Tiger Woods changed golf physics forever","status":"approved"},
-  {"id":25,"topic":"What happens to your heart when you laugh","status":"approved"},
-  {"id":26,"topic":"The 100-year-old lightbulb that is still burning today","status":"approved"},
-  {"id":27,"topic":"The only movie star with a patented torpedo system","status":"approved"},
-  {"id":28,"topic":"Why left-handed athletes have an advantage in boxing","status":"approved"},
-  {"id":29,"topic":"How cold showers boost your immune system","status":"approved"},
-  {"id":30,"topic":"The mystery of the 'Satoshi Nakamoto' Bitcoin wallet","status":"approved"},
-  {"id":31,"topic":"Why the Pixar 'A113' code is in every movie","status":"approved"},
-  {"id":32,"topic":"The fastest human speed ever recorded on land","status":"approved"},
-  {"id":33,"topic":"Why your brain creates 'False Memories' easily","status":"approved"},
-  {"id":34,"topic":"The country that exists inside a single building","status":"approved"},
-  {"id":35,"topic":"How the 'Save' icon became a mystery to Gen Z","status":"approved"},
-  {"id":36,"topic":"The actor who did all his stunts in Mission Impossible","status":"approved"},
-  {"id":37,"topic":"Why basketball hoops used to have closed nets","status":"approved"},
-  {"id":38,"topic":"The hidden danger of sitting for 8 hours straight","status":"approved"},
-  {"id":39,"topic":"Why Singapore imports almost all of its water","status":"approved"},
-  {"id":40,"topic":"The first webcam was created to watch a coffee pot","status":"approved"},
-  {"id":41,"topic":"The hidden message in the Columbia Pictures logo","status":"approved"},
-  {"id":42,"topic":"How many calories a Chess Grandmaster burns sitting down","status":"approved"},
-  {"id":43,"topic":"Why modern wheat is different from what our ancestors ate","status":"approved"},
-  {"id":44,"topic":"The island shared by two countries every six months","status":"approved"},
-  {"id":45,"topic":"Why NASA still uses technology from the 1970s","status":"approved"},
-  {"id":46,"topic":"The movie scene that was improvised and became iconic","status":"approved"},
-  {"id":47,"topic":"The secret training of Sumo wrestlers","status":"approved"},
-  {"id":48,"topic":"How 'Digital Detox' affects your dopamine levels","status":"approved"},
-  {"id":49,"topic":"The most guarded border on Earth and why","status":"approved"},
-  {"id":50,"topic":"The future of Neuralink and human-AI collaboration","status":"approved"},
-
-  {"id":51,"topic":"Why airplanes dim cabin lights during takeoff and landing","status":"approved"},
-  {"id":52,"topic":"The science behind déjà vu and why it happens","status":"approved"},
-  {"id":53,"topic":"How sharks existed before trees on Earth","status":"approved"},
-  {"id":54,"topic":"Why humans can’t tickle themselves","status":"approved"},
-  {"id":55,"topic":"The real reason why we yawn when others yawn","status":"approved"},
-  {"id":56,"topic":"How WiFi signals can pass through walls","status":"approved"},
-  {"id":57,"topic":"Why flamingos are pink and can lose their color","status":"approved"},
-  {"id":58,"topic":"The first photo ever taken in history","status":"approved"},
-  {"id":59,"topic":"How ants build complex colonies without leaders","status":"approved"},
-  {"id":60,"topic":"Why time feels faster as you get older","status":"approved"},
-  {"id":61,"topic":"The hidden meaning behind common dreams","status":"approved"},
-  {"id":62,"topic":"Why cats always land on their feet","status":"approved"},
-  {"id":63,"topic":"How deep the Mariana Trench really is","status":"approved"},
-  {"id":64,"topic":"The reason why popcorn pops","status":"approved"},
-  {"id":65,"topic":"Why humans only use a portion of their brain myth explained","status":"approved"},
-  {"id":66,"topic":"The story behind the invention of the internet","status":"approved"},
-  {"id":67,"topic":"Why we dream in color or black and white","status":"approved"},
-  {"id":68,"topic":"How fast lightning actually travels","status":"approved"},
-  {"id":69,"topic":"Why onions make you cry","status":"approved"},
-  {"id":70,"topic":"The science of why music gives you chills","status":"approved"},
-  {"id":71,"topic":"Why octopuses are considered highly intelligent","status":"approved"},
-  {"id":72,"topic":"How astronauts sleep in space","status":"approved"},
-  {"id":73,"topic":"Why some people are night owls vs early birds","status":"approved"},
-  {"id":74,"topic":"The mystery behind the Bermuda Triangle","status":"approved"},
-  {"id":75,"topic":"How chameleons change color","status":"approved"},
-  {"id":76,"topic":"Why humans have wisdom teeth","status":"approved"},
-  {"id":77,"topic":"The physics behind roller coasters","status":"approved"},
-  {"id":78,"topic":"Why the sky appears blue","status":"approved"},
-  {"id":79,"topic":"How long a human can survive without sleep","status":"approved"},
-  {"id":80,"topic":"Why dogs tilt their heads when listening","status":"approved"},
-  {"id":81,"topic":"The origin of emojis and digital communication","status":"approved"},
-  {"id":82,"topic":"How GPS works without internet","status":"approved"},
-  {"id":83,"topic":"Why humans blush when embarrassed","status":"approved"},
-  {"id":84,"topic":"The science behind optical illusions","status":"approved"},
-  {"id":85,"topic":"Why some people are left-handed","status":"approved"},
-  {"id":86,"topic":"How volcanoes form and erupt","status":"approved"},
-  {"id":87,"topic":"Why humans get goosebumps","status":"approved"},
-  {"id":88,"topic":"The reason why mirrors flip images horizontally","status":"approved"},
-  {"id":89,"topic":"How batteries store and release energy","status":"approved"},
-  {"id":90,"topic":"Why humans laugh and its evolutionary purpose","status":"approved"},
-  {"id":91,"topic":"The fastest animal in the ocean","status":"approved"},
-  {"id":92,"topic":"Why humans need sleep to survive","status":"approved"},
-  {"id":93,"topic":"How magnets work at the atomic level","status":"approved"},
-  {"id":94,"topic":"Why rain has a distinct smell","status":"approved"},
-  {"id":95,"topic":"The science behind black holes","status":"approved"},
-  {"id":96,"topic":"Why humans have different blood types","status":"approved"},
-  {"id":97,"topic":"How airplanes stay in the air","status":"approved"},
-  {"id":98,"topic":"Why we see stars when we hit our head","status":"approved"},
-  {"id":99,"topic":"The reason behind hiccups","status":"approved"},
-  {"id":100,"topic":"How clouds are formed in the sky","status":"approved"},
-
-  {"id":101,"topic":"Why humans can’t breathe underwater naturally","status":"approved"},
-  {"id":102,"topic":"How electric cars actually work","status":"approved"},
-  {"id":103,"topic":"Why fingerprints are unique to every person","status":"approved"},
-  {"id":104,"topic":"The history of the first smartphone","status":"approved"},
-  {"id":105,"topic":"Why some metals rust while others don’t","status":"approved"},
-  {"id":106,"topic":"How satellites stay in orbit","status":"approved"},
-  {"id":107,"topic":"Why humans have different eye colors","status":"approved"},
-  {"id":108,"topic":"The science of sound and how we hear","status":"approved"},
-  {"id":109,"topic":"Why ice floats on water","status":"approved"},
-  {"id":110,"topic":"How vaccines train the immune system","status":"approved"},
-  {"id":111,"topic":"Why we feel pain and its purpose","status":"approved"},
-  {"id":112,"topic":"The evolution of social media platforms","status":"approved"},
-  {"id":113,"topic":"Why the moon has phases","status":"approved"},
-  {"id":114,"topic":"How search engines rank websites","status":"approved"},
-  {"id":115,"topic":"Why humans sweat when hot","status":"approved"},
-  {"id":116,"topic":"The science of habit formation","status":"approved"},
-  {"id":117,"topic":"Why we get addicted to scrolling","status":"approved"},
-  {"id":118,"topic":"How deepfake technology works","status":"approved"},
-  {"id":119,"topic":"Why humans procrastinate","status":"approved"},
-  {"id":120,"topic":"The rise of artificial intelligence in daily life","status":"approved"},
-
-  {"id":121,"topic":"Why humans form habits easily","status":"approved"},
-  {"id":122,"topic":"How blockchain technology works","status":"approved"},
-  {"id":123,"topic":"Why humans enjoy scary movies","status":"approved"},
-  {"id":124,"topic":"The science behind memory retention","status":"approved"},
-  {"id":125,"topic":"Why humans compare themselves to others","status":"approved"},
-  {"id":126,"topic":"How streaming platforms recommend content","status":"approved"},
-  {"id":127,"topic":"Why humans crave sugar","status":"approved"},
-  {"id":128,"topic":"The future of virtual reality technology","status":"approved"},
-  {"id":129,"topic":"Why people believe in conspiracy theories","status":"approved"},
-  {"id":130,"topic":"How recommendation algorithms shape behavior","status":"approved"},
-
-  {"id":131,"topic":"Why humans seek validation on social media","status":"approved"},
-  {"id":132,"topic":"The science of motivation and discipline","status":"approved"},
-  {"id":133,"topic":"Why people fear public speaking","status":"approved"},
-  {"id":134,"topic":"How habits can rewire the brain","status":"approved"},
-  {"id":135,"topic":"Why humans are naturally curious","status":"approved"},
-  {"id":136,"topic":"The psychology behind impulse buying","status":"approved"},
-  {"id":137,"topic":"Why humans resist change","status":"approved"},
-  {"id":138,"topic":"The science behind confidence","status":"approved"},
-  {"id":139,"topic":"Why humans seek comfort zones","status":"approved"},
-  {"id":140,"topic":"The psychology of decision making","status":"approved"},
-
-  {"id":141,"topic":"Why humans overthink situations","status":"approved"},
-  {"id":142,"topic":"The science behind first impressions","status":"approved"},
-  {"id":143,"topic":"Why humans fear failure","status":"approved"},
-  {"id":144,"topic":"The psychology of persuasion","status":"approved"},
-  {"id":145,"topic":"Why humans value social status","status":"approved"},
-  {"id":146,"topic":"The science behind charisma","status":"approved"},
-  {"id":147,"topic":"Why humans feel jealousy","status":"approved"},
-  {"id":148,"topic":"The psychology of happiness","status":"approved"},
-  {"id":149,"topic":"Why humans fear rejection","status":"approved"},
-  {"id":150,"topic":"The science behind emotional intelligence","status":"approved"},
-
-  {"id":151,"topic":"Why humans need social connections","status":"approved"},
-  {"id":152,"topic":"The psychology behind habits and routines","status":"approved"},
-  {"id":153,"topic":"Why humans enjoy storytelling","status":"approved"},
-  {"id":154,"topic":"The science of attention span in the digital age","status":"approved"},
-  {"id":155,"topic":"Why humans are drawn to controversy","status":"approved"},
-  {"id":156,"topic":"The psychology of viral content","status":"approved"},
-  {"id":157,"topic":"Why humans follow trends","status":"approved"},
-  {"id":158,"topic":"The science behind curiosity gaps","status":"approved"},
-  {"id":159,"topic":"Why humans enjoy competition","status":"approved"},
-  {"id":160,"topic":"The psychology of success mindset","status":"approved"},
-
-  {"id":161,"topic":"Why humans seek meaning in life","status":"approved"},
-  {"id":162,"topic":"The science behind resilience","status":"approved"},
-  {"id":163,"topic":"Why humans fear the unknown","status":"approved"},
-  {"id":164,"topic":"The psychology behind risk-taking","status":"approved"},
-  {"id":165,"topic":"Why humans value time differently","status":"approved"},
-  {"id":166,"topic":"The science behind burnout","status":"approved"},
-  {"id":167,"topic":"Why humans struggle with consistency","status":"approved"},
-  {"id":168,"topic":"The psychology behind discipline","status":"approved"},
-  {"id":169,"topic":"Why humans seek entertainment constantly","status":"approved"},
-  {"id":170,"topic":"The science behind habit loops","status":"approved"},
-
-  {"id":171,"topic":"Why humans crave novelty","status":"approved"},
-  {"id":172,"topic":"The psychology behind digital addiction","status":"approved"},
-  {"id":173,"topic":"Why humans value rewards and incentives","status":"approved"},
-  {"id":174,"topic":"The science behind delayed gratification","status":"approved"},
-  {"id":175,"topic":"Why humans are emotional decision makers","status":"approved"},
-  {"id":176,"topic":"The psychology of branding and identity","status":"approved"},
-  {"id":177,"topic":"Why humans seek belonging","status":"approved"},
-  {"id":178,"topic":"The science behind habit stacking","status":"approved"},
-  {"id":179,"topic":"Why humans enjoy surprises","status":"approved"},
-  {"id":180,"topic":"The psychology of learning new skills","status":"approved"},
-
-  {"id":181,"topic":"Why humans remember emotional events better","status":"approved"},
-  {"id":182,"topic":"The science behind mental focus","status":"approved"},
-  {"id":183,"topic":"Why humans seek convenience in technology","status":"approved"},
-  {"id":184,"topic":"The psychology behind procrastination loops","status":"approved"},
-  {"id":185,"topic":"Why humans enjoy storytelling formats like short videos","status":"approved"},
-  {"id":186,"topic":"The science behind dopamine hits from notifications","status":"approved"},
-  {"id":187,"topic":"Why humans adapt quickly to new technology","status":"approved"},
-  {"id":188,"topic":"The psychology behind binge-watching","status":"approved"},
-  {"id":189,"topic":"Why humans prefer visual content over text","status":"approved"},
-  {"id":190,"topic":"The science behind short-form content addiction","status":"approved"},
-
-  {"id":191,"topic":"Why humans are influenced by social proof","status":"approved"},
-  {"id":192,"topic":"The psychology behind online trends","status":"approved"},
-  {"id":193,"topic":"Why humans enjoy relatable content","status":"approved"},
-  {"id":194,"topic":"The science behind emotional triggers in content","status":"approved"},
-  {"id":195,"topic":"Why humans engage with controversial topics","status":"approved"},
-  {"id":196,"topic":"The psychology behind curiosity-driven clicks","status":"approved"},
-  {"id":197,"topic":"Why humans love storytelling hooks","status":"approved"},
-  {"id":198,"topic":"The science behind attention-grabbing headlines","status":"approved"},
-  {"id":199,"topic":"Why humans engage more with emotional content","status":"approved"},
-  {"id":200,"topic":"The psychology behind viral storytelling formats","status":"approved"}
+  {
+    "id": 1,
+    "topic": "The first computer mouse was made of wood",
+    "status": "posted"
+  },
+  {
+    "id": 2,
+    "topic": "How Bluetooth was named after a Viking King",
+    "status": "posted"
+  },
+  {
+    "id": 3,
+    "topic": "The actor who almost played Iron Man instead of RDJ",
+    "status": "posted"
+  },
+  {
+    "id": 4,
+    "topic": "Why Olympic gold medals are actually made of silver",
+    "status": "posted"
+  },
+  {
+    "id": 5,
+    "topic": "The secret reason why humans have fingerprints",
+    "status": "posted"
+  },
+  {
+    "id": 6,
+    "topic": "The country with 11 different time zones",
+    "status": "posted"
+  },
+  {
+    "id": 7,
+    "topic": "How 1.44MB floppy disks still run some subways",
+    "status": "posted"
+  },
+  {
+    "id": 8,
+    "topic": "The real-life inspiration behind the Joker character",
+    "status": "posted"
+  },
+  {
+    "id": 9,
+    "topic": "Why Michael Jordan was cut from high school basketball",
+    "status": "posted"
+  },
+  {
+    "id": 10,
+    "topic": "Why walking in nature actually rewires your brain",
+    "status": "posted"
+  },
+  {
+    "id": 11,
+    "topic": "The world's shortest international bridge (only 32 feet)",
+    "status": "posted"
+  },
+  {
+    "id": 12,
+    "topic": "When Microsoft almost bought Nintendo in 1999",
+    "status": "posted"
+  },
+  {
+    "id": 13,
+    "topic": "The movie that accidentally saved the lives of its crew",
+    "status": "posted"
+  },
+  {
+    "id": 14,
+    "topic": "How Formula 1 drivers lose 4kg in one race",
+    "status": "posted"
+  },
+  {
+    "id": 15,
+    "topic": "The 'Blue Zones' where people live past 100",
+    "status": "approved"
+  },
+  {
+    "id": 16,
+    "topic": "Why Switzerland has enough bunkers for its entire population",
+    "status": "approved"
+  },
+  {
+    "id": 17,
+    "topic": "Why Google's first storage was made of LEGO bricks",
+    "status": "approved"
+  },
+  {
+    "id": 18,
+    "topic": "The secret reason Disney characters wear white gloves",
+    "status": "approved"
+  },
+  {
+    "id": 19,
+    "topic": "The sport that was played on the Moon",
+    "status": "approved"
+  },
+  {
+    "id": 20,
+    "topic": "How 'Power Naps' actually improve cognitive function",
+    "status": "approved"
+  },
+  {
+    "id": 21,
+    "topic": "The country that changed its name for branding",
+    "status": "approved"
+  },
+  {
+    "id": 22,
+    "topic": "Why we call it a 'Bug' in software code",
+    "status": "approved"
+  },
+  {
+    "id": 23,
+    "topic": "The animation error that created the Creepers in Minecraft",
+    "status": "approved"
+  },
+  {
+    "id": 24,
+    "topic": "How Tiger Woods changed golf physics forever",
+    "status": "approved"
+  },
+  {
+    "id": 25,
+    "topic": "What happens to your heart when you laugh",
+    "status": "approved"
+  },
+  {
+    "id": 26,
+    "topic": "The 100-year-old lightbulb that is still burning today",
+    "status": "approved"
+  },
+  {
+    "id": 27,
+    "topic": "The only movie star with a patented torpedo system",
+    "status": "approved"
+  },
+  {
+    "id": 28,
+    "topic": "Why left-handed athletes have an advantage in boxing",
+    "status": "approved"
+  },
+  {
+    "id": 29,
+    "topic": "How cold showers boost your immune system",
+    "status": "approved"
+  },
+  {
+    "id": 30,
+    "topic": "The mystery of the 'Satoshi Nakamoto' Bitcoin wallet",
+    "status": "approved"
+  },
+  {
+    "id": 31,
+    "topic": "Why the Pixar 'A113' code is in every movie",
+    "status": "approved"
+  },
+  {
+    "id": 32,
+    "topic": "The fastest human speed ever recorded on land",
+    "status": "approved"
+  },
+  {
+    "id": 33,
+    "topic": "Why your brain creates 'False Memories' easily",
+    "status": "approved"
+  },
+  {
+    "id": 34,
+    "topic": "The country that exists inside a single building",
+    "status": "approved"
+  },
+  {
+    "id": 35,
+    "topic": "How the 'Save' icon became a mystery to Gen Z",
+    "status": "approved"
+  },
+  {
+    "id": 36,
+    "topic": "The actor who did all his stunts in Mission Impossible",
+    "status": "approved"
+  },
+  {
+    "id": 37,
+    "topic": "Why basketball hoops used to have closed nets",
+    "status": "approved"
+  },
+  {
+    "id": 38,
+    "topic": "The hidden danger of sitting for 8 hours straight",
+    "status": "approved"
+  },
+  {
+    "id": 39,
+    "topic": "Why Singapore imports almost all of its water",
+    "status": "approved"
+  },
+  {
+    "id": 40,
+    "topic": "The first webcam was created to watch a coffee pot",
+    "status": "approved"
+  },
+  {
+    "id": 41,
+    "topic": "The hidden message in the Columbia Pictures logo",
+    "status": "approved"
+  },
+  {
+    "id": 42,
+    "topic": "How many calories a Chess Grandmaster burns sitting down",
+    "status": "approved"
+  },
+  {
+    "id": 43,
+    "topic": "Why modern wheat is different from what our ancestors ate",
+    "status": "approved"
+  },
+  {
+    "id": 44,
+    "topic": "The island shared by two countries every six months",
+    "status": "approved"
+  },
+  {
+    "id": 45,
+    "topic": "Why NASA still uses technology from the 1970s",
+    "status": "approved"
+  },
+  {
+    "id": 46,
+    "topic": "The movie scene that was improvised and became iconic",
+    "status": "approved"
+  },
+  {
+    "id": 47,
+    "topic": "The secret training of Sumo wrestlers",
+    "status": "approved"
+  },
+  {
+    "id": 48,
+    "topic": "How 'Digital Detox' affects your dopamine levels",
+    "status": "approved"
+  },
+  {
+    "id": 49,
+    "topic": "The most guarded border on Earth and why",
+    "status": "approved"
+  },
+  {
+    "id": 50,
+    "topic": "The future of Neuralink and human-AI collaboration",
+    "status": "approved"
+  },
+  {
+    "id": 51,
+    "topic": "Why airplanes dim cabin lights during takeoff and landing",
+    "status": "approved"
+  },
+  {
+    "id": 52,
+    "topic": "The science behind d\u00e9j\u00e0 vu and why it happens",
+    "status": "approved"
+  },
+  {
+    "id": 53,
+    "topic": "How sharks existed before trees on Earth",
+    "status": "approved"
+  },
+  {
+    "id": 54,
+    "topic": "Why humans can\u2019t tickle themselves",
+    "status": "approved"
+  },
+  {
+    "id": 55,
+    "topic": "The real reason why we yawn when others yawn",
+    "status": "approved"
+  },
+  {
+    "id": 56,
+    "topic": "How WiFi signals can pass through walls",
+    "status": "approved"
+  },
+  {
+    "id": 57,
+    "topic": "Why flamingos are pink and can lose their color",
+    "status": "approved"
+  },
+  {
+    "id": 58,
+    "topic": "The first photo ever taken in history",
+    "status": "approved"
+  },
+  {
+    "id": 59,
+    "topic": "How ants build complex colonies without leaders",
+    "status": "approved"
+  },
+  {
+    "id": 60,
+    "topic": "Why time feels faster as you get older",
+    "status": "approved"
+  },
+  {
+    "id": 61,
+    "topic": "The hidden meaning behind common dreams",
+    "status": "approved"
+  },
+  {
+    "id": 62,
+    "topic": "Why cats always land on their feet",
+    "status": "approved"
+  },
+  {
+    "id": 63,
+    "topic": "How deep the Mariana Trench really is",
+    "status": "approved"
+  },
+  {
+    "id": 64,
+    "topic": "The reason why popcorn pops",
+    "status": "approved"
+  },
+  {
+    "id": 65,
+    "topic": "Why humans only use a portion of their brain myth explained",
+    "status": "approved"
+  },
+  {
+    "id": 66,
+    "topic": "The story behind the invention of the internet",
+    "status": "approved"
+  },
+  {
+    "id": 67,
+    "topic": "Why we dream in color or black and white",
+    "status": "approved"
+  },
+  {
+    "id": 68,
+    "topic": "How fast lightning actually travels",
+    "status": "approved"
+  },
+  {
+    "id": 69,
+    "topic": "Why onions make you cry",
+    "status": "approved"
+  },
+  {
+    "id": 70,
+    "topic": "The science of why music gives you chills",
+    "status": "approved"
+  },
+  {
+    "id": 71,
+    "topic": "Why octopuses are considered highly intelligent",
+    "status": "approved"
+  },
+  {
+    "id": 72,
+    "topic": "How astronauts sleep in space",
+    "status": "approved"
+  },
+  {
+    "id": 73,
+    "topic": "Why some people are night owls vs early birds",
+    "status": "approved"
+  },
+  {
+    "id": 74,
+    "topic": "The mystery behind the Bermuda Triangle",
+    "status": "approved"
+  },
+  {
+    "id": 75,
+    "topic": "How chameleons change color",
+    "status": "approved"
+  },
+  {
+    "id": 76,
+    "topic": "Why humans have wisdom teeth",
+    "status": "approved"
+  },
+  {
+    "id": 77,
+    "topic": "The physics behind roller coasters",
+    "status": "approved"
+  },
+  {
+    "id": 78,
+    "topic": "Why the sky appears blue",
+    "status": "approved"
+  },
+  {
+    "id": 79,
+    "topic": "How long a human can survive without sleep",
+    "status": "approved"
+  },
+  {
+    "id": 80,
+    "topic": "Why dogs tilt their heads when listening",
+    "status": "approved"
+  },
+  {
+    "id": 81,
+    "topic": "The origin of emojis and digital communication",
+    "status": "approved"
+  },
+  {
+    "id": 82,
+    "topic": "How GPS works without internet",
+    "status": "approved"
+  },
+  {
+    "id": 83,
+    "topic": "Why humans blush when embarrassed",
+    "status": "approved"
+  },
+  {
+    "id": 84,
+    "topic": "The science behind optical illusions",
+    "status": "approved"
+  },
+  {
+    "id": 85,
+    "topic": "Why some people are left-handed",
+    "status": "approved"
+  },
+  {
+    "id": 86,
+    "topic": "How volcanoes form and erupt",
+    "status": "approved"
+  },
+  {
+    "id": 87,
+    "topic": "Why humans get goosebumps",
+    "status": "approved"
+  },
+  {
+    "id": 88,
+    "topic": "The reason why mirrors flip images horizontally",
+    "status": "approved"
+  },
+  {
+    "id": 89,
+    "topic": "How batteries store and release energy",
+    "status": "approved"
+  },
+  {
+    "id": 90,
+    "topic": "Why humans laugh and its evolutionary purpose",
+    "status": "approved"
+  },
+  {
+    "id": 91,
+    "topic": "The fastest animal in the ocean",
+    "status": "approved"
+  },
+  {
+    "id": 92,
+    "topic": "Why humans need sleep to survive",
+    "status": "approved"
+  },
+  {
+    "id": 93,
+    "topic": "How magnets work at the atomic level",
+    "status": "approved"
+  },
+  {
+    "id": 94,
+    "topic": "Why rain has a distinct smell",
+    "status": "approved"
+  },
+  {
+    "id": 95,
+    "topic": "The science behind black holes",
+    "status": "approved"
+  },
+  {
+    "id": 96,
+    "topic": "Why humans have different blood types",
+    "status": "approved"
+  },
+  {
+    "id": 97,
+    "topic": "How airplanes stay in the air",
+    "status": "approved"
+  },
+  {
+    "id": 98,
+    "topic": "Why we see stars when we hit our head",
+    "status": "approved"
+  },
+  {
+    "id": 99,
+    "topic": "The reason behind hiccups",
+    "status": "approved"
+  },
+  {
+    "id": 100,
+    "topic": "How clouds are formed in the sky",
+    "status": "approved"
+  },
+  {
+    "id": 101,
+    "topic": "Why humans can\u2019t breathe underwater naturally",
+    "status": "approved"
+  },
+  {
+    "id": 102,
+    "topic": "How electric cars actually work",
+    "status": "approved"
+  },
+  {
+    "id": 103,
+    "topic": "Why fingerprints are unique to every person",
+    "status": "approved"
+  },
+  {
+    "id": 104,
+    "topic": "The history of the first smartphone",
+    "status": "approved"
+  },
+  {
+    "id": 105,
+    "topic": "Why some metals rust while others don\u2019t",
+    "status": "approved"
+  },
+  {
+    "id": 106,
+    "topic": "How satellites stay in orbit",
+    "status": "approved"
+  },
+  {
+    "id": 107,
+    "topic": "Why humans have different eye colors",
+    "status": "approved"
+  },
+  {
+    "id": 108,
+    "topic": "The science of sound and how we hear",
+    "status": "approved"
+  },
+  {
+    "id": 109,
+    "topic": "Why ice floats on water",
+    "status": "approved"
+  },
+  {
+    "id": 110,
+    "topic": "How vaccines train the immune system",
+    "status": "approved"
+  },
+  {
+    "id": 111,
+    "topic": "Why we feel pain and its purpose",
+    "status": "approved"
+  },
+  {
+    "id": 112,
+    "topic": "The evolution of social media platforms",
+    "status": "approved"
+  },
+  {
+    "id": 113,
+    "topic": "Why the moon has phases",
+    "status": "approved"
+  },
+  {
+    "id": 114,
+    "topic": "How search engines rank websites",
+    "status": "approved"
+  },
+  {
+    "id": 115,
+    "topic": "Why humans sweat when hot",
+    "status": "approved"
+  },
+  {
+    "id": 116,
+    "topic": "The science of habit formation",
+    "status": "approved"
+  },
+  {
+    "id": 117,
+    "topic": "Why we get addicted to scrolling",
+    "status": "approved"
+  },
+  {
+    "id": 118,
+    "topic": "How deepfake technology works",
+    "status": "approved"
+  },
+  {
+    "id": 119,
+    "topic": "Why humans procrastinate",
+    "status": "approved"
+  },
+  {
+    "id": 120,
+    "topic": "The rise of artificial intelligence in daily life",
+    "status": "approved"
+  },
+  {
+    "id": 121,
+    "topic": "Why humans form habits easily",
+    "status": "approved"
+  },
+  {
+    "id": 122,
+    "topic": "How blockchain technology works",
+    "status": "approved"
+  },
+  {
+    "id": 123,
+    "topic": "Why humans enjoy scary movies",
+    "status": "approved"
+  },
+  {
+    "id": 124,
+    "topic": "The science behind memory retention",
+    "status": "approved"
+  },
+  {
+    "id": 125,
+    "topic": "Why humans compare themselves to others",
+    "status": "approved"
+  },
+  {
+    "id": 126,
+    "topic": "How streaming platforms recommend content",
+    "status": "approved"
+  },
+  {
+    "id": 127,
+    "topic": "Why humans crave sugar",
+    "status": "approved"
+  },
+  {
+    "id": 128,
+    "topic": "The future of virtual reality technology",
+    "status": "approved"
+  },
+  {
+    "id": 129,
+    "topic": "Why people believe in conspiracy theories",
+    "status": "approved"
+  },
+  {
+    "id": 130,
+    "topic": "How recommendation algorithms shape behavior",
+    "status": "approved"
+  },
+  {
+    "id": 131,
+    "topic": "Why humans seek validation on social media",
+    "status": "approved"
+  },
+  {
+    "id": 132,
+    "topic": "The science of motivation and discipline",
+    "status": "approved"
+  },
+  {
+    "id": 133,
+    "topic": "Why people fear public speaking",
+    "status": "approved"
+  },
+  {
+    "id": 134,
+    "topic": "How habits can rewire the brain",
+    "status": "approved"
+  },
+  {
+    "id": 135,
+    "topic": "Why humans are naturally curious",
+    "status": "approved"
+  },
+  {
+    "id": 136,
+    "topic": "The psychology behind impulse buying",
+    "status": "approved"
+  },
+  {
+    "id": 137,
+    "topic": "Why humans resist change",
+    "status": "approved"
+  },
+  {
+    "id": 138,
+    "topic": "The science behind confidence",
+    "status": "approved"
+  },
+  {
+    "id": 139,
+    "topic": "Why humans seek comfort zones",
+    "status": "approved"
+  },
+  {
+    "id": 140,
+    "topic": "The psychology of decision making",
+    "status": "approved"
+  },
+  {
+    "id": 141,
+    "topic": "Why humans overthink situations",
+    "status": "approved"
+  },
+  {
+    "id": 142,
+    "topic": "The science behind first impressions",
+    "status": "approved"
+  },
+  {
+    "id": 143,
+    "topic": "Why humans fear failure",
+    "status": "approved"
+  },
+  {
+    "id": 144,
+    "topic": "The psychology of persuasion",
+    "status": "approved"
+  },
+  {
+    "id": 145,
+    "topic": "Why humans value social status",
+    "status": "approved"
+  },
+  {
+    "id": 146,
+    "topic": "The science behind charisma",
+    "status": "approved"
+  },
+  {
+    "id": 147,
+    "topic": "Why humans feel jealousy",
+    "status": "approved"
+  },
+  {
+    "id": 148,
+    "topic": "The psychology of happiness",
+    "status": "approved"
+  },
+  {
+    "id": 149,
+    "topic": "Why humans fear rejection",
+    "status": "approved"
+  },
+  {
+    "id": 150,
+    "topic": "The science behind emotional intelligence",
+    "status": "approved"
+  },
+  {
+    "id": 151,
+    "topic": "Why humans need social connections",
+    "status": "approved"
+  },
+  {
+    "id": 152,
+    "topic": "The psychology behind habits and routines",
+    "status": "approved"
+  },
+  {
+    "id": 153,
+    "topic": "Why humans enjoy storytelling",
+    "status": "approved"
+  },
+  {
+    "id": 154,
+    "topic": "The science of attention span in the digital age",
+    "status": "approved"
+  },
+  {
+    "id": 155,
+    "topic": "Why humans are drawn to controversy",
+    "status": "approved"
+  },
+  {
+    "id": 156,
+    "topic": "The psychology of viral content",
+    "status": "approved"
+  },
+  {
+    "id": 157,
+    "topic": "Why humans follow trends",
+    "status": "approved"
+  },
+  {
+    "id": 158,
+    "topic": "The science behind curiosity gaps",
+    "status": "approved"
+  },
+  {
+    "id": 159,
+    "topic": "Why humans enjoy competition",
+    "status": "approved"
+  },
+  {
+    "id": 160,
+    "topic": "The psychology of success mindset",
+    "status": "approved"
+  },
+  {
+    "id": 161,
+    "topic": "Why humans seek meaning in life",
+    "status": "approved"
+  },
+  {
+    "id": 162,
+    "topic": "The science behind resilience",
+    "status": "approved"
+  },
+  {
+    "id": 163,
+    "topic": "Why humans fear the unknown",
+    "status": "approved"
+  },
+  {
+    "id": 164,
+    "topic": "The psychology behind risk-taking",
+    "status": "approved"
+  },
+  {
+    "id": 165,
+    "topic": "Why humans value time differently",
+    "status": "approved"
+  },
+  {
+    "id": 166,
+    "topic": "The science behind burnout",
+    "status": "approved"
+  },
+  {
+    "id": 167,
+    "topic": "Why humans struggle with consistency",
+    "status": "approved"
+  },
+  {
+    "id": 168,
+    "topic": "The psychology behind discipline",
+    "status": "approved"
+  },
+  {
+    "id": 169,
+    "topic": "Why humans seek entertainment constantly",
+    "status": "approved"
+  },
+  {
+    "id": 170,
+    "topic": "The science behind habit loops",
+    "status": "approved"
+  },
+  {
+    "id": 171,
+    "topic": "Why humans crave novelty",
+    "status": "approved"
+  },
+  {
+    "id": 172,
+    "topic": "The psychology behind digital addiction",
+    "status": "approved"
+  },
+  {
+    "id": 173,
+    "topic": "Why humans value rewards and incentives",
+    "status": "approved"
+  },
+  {
+    "id": 174,
+    "topic": "The science behind delayed gratification",
+    "status": "approved"
+  },
+  {
+    "id": 175,
+    "topic": "Why humans are emotional decision makers",
+    "status": "approved"
+  },
+  {
+    "id": 176,
+    "topic": "The psychology of branding and identity",
+    "status": "approved"
+  },
+  {
+    "id": 177,
+    "topic": "Why humans seek belonging",
+    "status": "approved"
+  },
+  {
+    "id": 178,
+    "topic": "The science behind habit stacking",
+    "status": "approved"
+  },
+  {
+    "id": 179,
+    "topic": "Why humans enjoy surprises",
+    "status": "approved"
+  },
+  {
+    "id": 180,
+    "topic": "The psychology of learning new skills",
+    "status": "approved"
+  },
+  {
+    "id": 181,
+    "topic": "Why humans remember emotional events better",
+    "status": "approved"
+  },
+  {
+    "id": 182,
+    "topic": "The science behind mental focus",
+    "status": "approved"
+  },
+  {
+    "id": 183,
+    "topic": "Why humans seek convenience in technology",
+    "status": "approved"
+  },
+  {
+    "id": 184,
+    "topic": "The psychology behind procrastination loops",
+    "status": "approved"
+  },
+  {
+    "id": 185,
+    "topic": "Why humans enjoy storytelling formats like short videos",
+    "status": "approved"
+  },
+  {
+    "id": 186,
+    "topic": "The science behind dopamine hits from notifications",
+    "status": "approved"
+  },
+  {
+    "id": 187,
+    "topic": "Why humans adapt quickly to new technology",
+    "status": "approved"
+  },
+  {
+    "id": 188,
+    "topic": "The psychology behind binge-watching",
+    "status": "approved"
+  },
+  {
+    "id": 189,
+    "topic": "Why humans prefer visual content over text",
+    "status": "approved"
+  },
+  {
+    "id": 190,
+    "topic": "The science behind short-form content addiction",
+    "status": "approved"
+  },
+  {
+    "id": 191,
+    "topic": "Why humans are influenced by social proof",
+    "status": "approved"
+  },
+  {
+    "id": 192,
+    "topic": "The psychology behind online trends",
+    "status": "approved"
+  },
+  {
+    "id": 193,
+    "topic": "Why humans enjoy relatable content",
+    "status": "approved"
+  },
+  {
+    "id": 194,
+    "topic": "The science behind emotional triggers in content",
+    "status": "approved"
+  },
+  {
+    "id": 195,
+    "topic": "Why humans engage with controversial topics",
+    "status": "approved"
+  },
+  {
+    "id": 196,
+    "topic": "The psychology behind curiosity-driven clicks",
+    "status": "approved"
+  },
+  {
+    "id": 197,
+    "topic": "Why humans love storytelling hooks",
+    "status": "approved"
+  },
+  {
+    "id": 198,
+    "topic": "The science behind attention-grabbing headlines",
+    "status": "approved"
+  },
+  {
+    "id": 199,
+    "topic": "Why humans engage more with emotional content",
+    "status": "approved"
+  },
+  {
+    "id": 200,
+    "topic": "The psychology behind viral storytelling formats",
+    "status": "approved"
+  }
 ]
