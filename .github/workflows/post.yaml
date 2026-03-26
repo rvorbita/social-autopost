@@ -2,19 +2,24 @@ name: Automated FB Queue
 
 on:
   schedule:
-    # - cron: '0 8 * * *' # Every day at 8 AM
-    # Runs at 1 AM, 9 AM, and 5 PM UTC (adjust to Manila time as needed)
     - cron: '0 1,9,17 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   run-and-commit:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          token: ${{ secrets.GH_PAT }} # Needs a Personal Access Token to push changes
+          python-version: '3.11'
 
       - name: Setup Python & Dependencies
         run: |
