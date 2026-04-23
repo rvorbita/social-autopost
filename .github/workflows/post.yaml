@@ -1,8 +1,8 @@
 name: Automated FB Queue
 
 on:
-  schedule:
-    - cron: '0 1,9,17 * * *'
+  # schedule:
+  #  - cron: '0 1,9,17 * * *'
   workflow_dispatch:
 
 permissions:
